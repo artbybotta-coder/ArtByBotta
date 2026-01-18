@@ -1,0 +1,1123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galería Botta</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fff4b8;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #333;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .navbar-brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+    }
+
+    .navbar-brand img {
+      width: 100%;
+    }
+
+    .navbar-nav {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+      margin: 0 15px;
+    }
+
+    .navbar a {
+      color: #fff;
+    }
+
+    #home {
+      background-image: url('https://via.placeholder.com/1500x700');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #productos .card {
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    #productos .card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      padding: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    #personalizadas {
+      background-color: white;
+      padding: 60px 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    #personalizadas h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    #personalizadas p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    #contacto h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      margin-bottom: 15px;
+    }
+
+    .btn-info {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+
+    .form-container iframe {
+      width: 80%;
+      max-width: 700px;
+      height: 600px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="imagenes/LOGODEV2.png" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#personalizadas">Obras Personalizadas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" style="background-image: url('imagenes/artbybottaolas2.JPG'); background-size: cover; background-position: center; height: 100vh; color: white; position: relative;">
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: -1;"></div> <!-- Fondo oscuro para mejorar el contraste -->
+  <div style="z-index: 1; position: relative;">
+  <div>
+    <h1 class="display-4">Galería Botta Art & Paints</h1>
+    <p class="lead">Encuentra obras únicas que inspiran tu espacio.</p>
+    <a href="#productos" class="btn btn-light btn-lg mt-3">Explorar Arte</a>
+  </div>
+</section>
+
+<!-- Productos Section -->
+<section id="productos" class="container my-5">
+  <h2 class="display-3 text-center mb-4">Nuestros Productos</h2>
+  <p class="text-center mb-5">Explora nuestra exclusiva selección de arte, ideales para tu hogar o espacio de trabajo.</p>
+  <div class="row g-4">
+
+    <!-- Obra Raña -->
+<div class="col-md-3 col-sm-6">
+  <div class="card p-3">
+    <img src="imagenes/artbybottarana.jpeg" class="product-image" alt="Rana" 
+          
+         data-bs-img="imagenes/artbybottarana.jpeg"
+         data-bs-title="Rana"
+         data-bs-year="2025"
+         data-bs-size="40x50 cm"
+         data-bs-tech="Acrílico sobre tela">
+    <div class="card-body">
+      <h5 class="text-center">Rana</h5>
+      <p class="text-center obra-detalles">
+        <strong>Año:</strong> <span class="year">2025</span><br>
+        <strong>Dimensiones:</strong> <span class="size">40x50 cm</span><br>
+        <strong>Técnica:</strong> <span class="tech">Acrílico sobre tela</span>
+      </p>
+      <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+    </div>
+  </div>
+</div>
+<!-- Modal para todas las obras -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content position-relative">
+      <div class="modal-header">
+        <h5 class="modal-title" id="imageModalLabel">Título de la Obra</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center position-relative">
+        <button class="carousel-arrow left-arrow">&lt;</button>
+        <img src="" id="modal-image" class="img-fluid mb-4">
+        <button class="carousel-arrow right-arrow">&gt;</button>
+        <p>
+          <strong>Año:</strong> <span id="modal-year"></span><br>
+          <strong>Dimensiones:</strong> <span id="modal-size"></span><br>
+          <strong>Técnica:</strong> <span id="modal-tech"></span>
+        </p>
+        <a href="#contacto" class="btn btn-info">Solicitar Información</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+   <!-- Obra MLK -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottamlk.jpeg" 
+          class="product-image" 
+          alt="Mohammed Ali & Malcolm X"
+          
+          data-bs-img="imagenes/artbybottamlk.jpeg"
+          data-bs-title="Mohammed Ali & Malcolm X"
+          data-bs-year="2024"
+          data-bs-size="30x40 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Mohammed Ali & Malcolm X</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2024<br>
+            <strong>Dimensiones:</strong> 30x40 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra Isla Paradísiaca -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottaisla.jpeg" 
+          class="product-image" 
+          alt="Costa de Palmeras"
+          
+          data-bs-img="imagenes/artbybottaisla.jpeg"
+          data-bs-title="Costa de Palmeras"
+          data-bs-year="2024"
+          data-bs-size="40x50 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Costa de Palmeras</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2024<br>
+            <strong>Dimensiones:</strong> 40x50 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra Mafalda -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottamafald.jpeg" 
+          class="product-image" 
+          alt="Mafalda Florida"
+          
+          data-bs-img="imagenes/artbybottamafald.jpeg"
+          data-bs-title="Mafalda Florida"
+          data-bs-year="2023"
+          data-bs-size="30x40 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Mafalda Florida</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2023<br>
+            <strong>Dimensiones:</strong> 30x40 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra Bote -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottabote.jpeg" 
+          class="product-image" 
+          alt="Barco al Amanecer"
+          
+          data-bs-img="imagenes/artbybottabote.jpeg"
+          data-bs-title="Barco al Amanecer"
+          data-bs-year="2024"
+          data-bs-size="35x45 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Barco al Amanecer</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2024<br>
+            <strong>Dimensiones:</strong> 35x45 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra Mafalda 2 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottamafald2.jpeg" 
+          class="product-image" 
+          alt="Manolito Florido"
+          
+          data-bs-img="imagenes/artbybottamafald2.jpeg"
+          data-bs-title="Manolito Florido"
+          data-bs-year="2023"
+          data-bs-size="30x40 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Manolito Florido</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2023<br>
+            <strong>Dimensiones:</strong> 30x40 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra Avioneta -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottapiloto.jpeg" 
+          class="product-image" 
+          alt="Avión"
+          
+          data-bs-img="imagenes/artbybottapiloto.jpeg"
+          data-bs-title="Avión"
+          data-bs-year="2024"
+          data-bs-size="35x45 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Avión</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2024<br>
+            <strong>Dimensiones:</strong> 35x45 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra Tiburón -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottatib.jpeg" 
+          class="product-image" 
+          alt="Tiburón y su sombra"
+           
+          data-bs-img="imagenes/artbybottatib.jpeg"
+          data-bs-title="Tiburón y su sombra"
+          data-bs-year="2025"
+          data-bs-size="40x50 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Tiburón y su sombra</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2025<br>
+            <strong>Dimensiones:</strong> 40x50 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra Olas -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottaolas.jpeg" 
+          class="product-image" 
+          alt="Gran Ola"
+          
+          data-bs-img="imagenes/artbybottaolas.jpeg"
+          data-bs-title="Gran Ola"
+          data-bs-year="2023"
+          data-bs-size="30x40 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Gran Ola</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2023<br>
+            <strong>Dimensiones:</strong> 30x40 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra Cascada -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottacascada.jpeg" 
+          class="product-image" 
+          alt="Cataratas"
+          
+          data-bs-img="imagenes/artbybottacascada.jpeg"
+          data-bs-title="Cataratas"
+          data-bs-year="2025"
+          data-bs-size="35x45 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Cataratas</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2025<br>
+            <strong>Dimensiones:</strong> 35x45 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra Olas Abstractas -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottaolasabst.jpeg" 
+          class="product-image" 
+          alt="Todo Olas"
+          
+          data-bs-img="imagenes/artbybottaolasabst.jpeg"
+          data-bs-title="Todo Olas"
+          data-bs-year="2023"
+          data-bs-size="40x50 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Todo Olas</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2023<br>
+            <strong>Dimensiones:</strong> 40x50 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+<!-- Obra Tortuga -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottatortuga.jpeg" 
+          class="product-image" 
+          alt="Tortuga en el Arrecife"
+          
+          data-bs-img="imagenes/artbybottatortuga.jpeg"
+          data-bs-title="Tortuga en el Arrecife"
+          data-bs-year="2025"
+          data-bs-size="50x40 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Tortuga en el Arrecife</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2025<br>
+            <strong>Dimensiones:</strong> 50x40 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+
+
+   
+
+    <!-- Obra Isla Sol -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottaislabst.jpeg" 
+          class="product-image" 
+          alt="Cálido Amanecer"
+          
+          data-bs-img="imagenes/artbybottaislabst.jpeg"
+          data-bs-title="Cálido Amancer"
+          data-bs-year="2023"
+          data-bs-size="30x40 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Cálido Amanecer</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2023<br>
+            <strong>Dimensiones:</strong> 30x40 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+<!-- Obra Perro -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottaperro.jpeg" 
+          class="product-image" 
+          alt="Perro"
+          
+          data-bs-img="imagenes/artbybottaperro.jpeg"
+          data-bs-title="Perro"
+          data-bs-year="2023"
+          data-bs-size="30x40 cm"
+          data-bs-tech="Acrílico sobre fibrofacil"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Perro</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2023<br>
+            <strong>Dimensiones:</strong> 30x40 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre fibrofacil
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra Abstracta -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottaabst.jpeg" 
+          class="product-image" 
+          alt="plantas Festivas"
+          
+          data-bs-img="imagenes/artbybottaabst.jpeg"
+          data-bs-title="Plantas Festivas"
+          data-bs-year="2024"
+          data-bs-size="35x50 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Plantas Festivas</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2024<br>
+            <strong>Dimensiones:</strong> 35x50 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela 
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Obra Cascada 2 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottacascada2.jpeg" 
+          class="product-image" 
+          alt="Cascada"
+          
+          data-bs-img="imagenes/artbybottacascada2.jpeg"
+          data-bs-title="Cascada"
+          data-bs-year="2023"
+          data-bs-size="30x40 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Cascada</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2023<br>
+            <strong>Dimensiones:</strong> 30x40 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+ <!-- Obra Tait -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottatit.jpeg" 
+          class="product-image" 
+          alt="Isla de Pascua"
+          
+          data-bs-img="imagenes/artbybottatit.jpeg"
+          data-bs-title="Isla de Pascua"
+          data-bs-year="2023"
+          data-bs-size="30x40 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Isla de Pascua</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2023<br>
+            <strong>Dimensiones:</strong> 30x40 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+<!-- Obra Perro -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottaaguila.jpeg" 
+          class="product-image" 
+          alt="El Aguilucho"
+          
+          data-bs-img="imagenes/artbybottaaguila.jpeg"
+          data-bs-title="El Aguilucho"
+          data-bs-year="2025"
+          data-bs-size="40x50 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">El Aguilucho</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2025<br>
+            <strong>Dimensiones:</strong> 40x50 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+<!-- Obra Perro -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottanochealga.jpeg" 
+          class="product-image" 
+          alt="Isla de Pascua"
+          
+          data-bs-img="imagenes/artbybottanochealga.jpeg"
+          data-bs-title="Pastizal de Noche"
+          data-bs-year="2025"
+          data-bs-size="40x50 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Pastizal de Noche</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2025<br>
+            <strong>Dimensiones:</strong> 40x50 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+<!-- Obra Perro -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottacolores.jpg" 
+          class="product-image" 
+          alt="Floración"
+          
+          data-bs-img="imagenes/artbybottacolores.jpg"
+          data-bs-title="Floración"
+          data-bs-year="2023"
+          data-bs-size="30x40 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Floración</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2023<br>
+            <strong>Dimensiones:</strong> 30x40 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra Árbol Desértico -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottaarboldesierto.jpeg" 
+          class="product-image" 
+          alt="Brotes Navideños"
+          
+          data-bs-img="imagenes/artbybottaarboldesierto.jpeg"
+          data-bs-title="Brotes Navideños"
+          data-bs-year="2024"
+          data-bs-size="35x50 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Brotes Navideños</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2024<br>
+            <strong>Dimensiones:</strong> 35x50 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra Camaleón -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottacamaleon.jpeg" 
+          class="product-image" 
+          alt="Camaleón"
+         
+          data-bs-img="imagenes/artbybottacamaleon.jpeg"
+          data-bs-title="Camaleón"
+          data-bs-year="2025"
+          data-bs-size="45x35 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Camaleón</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2025<br>
+            <strong>Dimensiones:</strong> 45x35 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra Isla Espejismo -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottaislanavi.jpeg" 
+          class="product-image" 
+          alt="Playa Luminosa"
+          
+          data-bs-img="imagenes/artbybottaislanavi.jpeg"
+          data-bs-title="Playa Luminosa"
+          data-bs-year="2023"
+          data-bs-size="40x50 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Playa Luminosa</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2023<br>
+            <strong>Dimensiones:</strong> 40x50 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra 2 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottacam2.jpeg" 
+          class="product-image" 
+          alt="Camaleón en la rama"
+         
+          data-bs-img="imagenes/artbybottacam2.jpeg"
+          data-bs-title="Cameleón en la rama"
+          data-bs-year="2025"
+          data-bs-size="30x40 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Cameleón en la rama</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2025<br>
+            <strong>Dimensiones:</strong> 30x40 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+<!-- Obra Árbol Abstracto -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottaarbolabst.jpeg" 
+          class="product-image" 
+          alt="Cristales"
+          
+          data-bs-img="imagenes/artbybottaarbolabst.jpeg"
+          data-bs-title="Cristales"
+          data-bs-year="2024"
+          data-bs-size="30x40 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Cristales</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2024<br>
+            <strong>Dimensiones:</strong> 30x40 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    
+
+    
+
+    <!-- Obra Árbol Colores -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottaarbolcolores.jpeg" 
+          class="product-image" 
+          alt="Planta con brotes"
+           
+          data-bs-img="imagenes/artbybottaarbolcolores.jpeg"
+          data-bs-title="Planta con brotes"
+          data-bs-year="2023"
+          data-bs-size="30x40 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Planta con brotes</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2023<br>
+            <strong>Dimensiones:</strong> 30x40 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+<!-- Obra Isla Anochecer -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottaislaanochecer.jpeg" 
+          class="product-image" 
+          alt="Costa Iluminada"
+          
+          data-bs-img="imagenes/artbybottaislaanochecer.jpeg"
+          data-bs-title="Costa Iluminada"
+          data-bs-year="2025"
+          data-bs-size="50x35 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Costa Iluminada</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2025<br>
+            <strong>Dimensiones:</strong> 50x35 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra Árbol -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottaarb.jpeg" 
+          class="product-image" 
+          alt="Planta"
+          
+          data-bs-img="imagenes/artbybottaarb.jpeg"
+          data-bs-title="Planta"
+          data-bs-year="2024"
+          data-bs-size="20x30 cm"
+          data-bs-tech="Acrílico sobre fibrofacil"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Planta</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2024<br>
+            <strong>Dimensiones:</strong> 20x30 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre fibrofacil
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Obra Árbol Abstracto 2 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottaarbolabst2.jpeg" 
+          class="product-image" 
+          alt="Arbol Master"
+           
+          data-bs-img="imagenes/artbybottaarbolabst2.jpeg"
+          data-bs-title="Arbol Master"
+          data-bs-year="2023"
+          data-bs-size="30x40 cm"
+          data-bs-tech="Acrílico sobre tela"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Arbol Master</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2023<br>
+            <strong>Dimensiones:</strong> 30x40 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre tela
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+<!-- Obra Perro -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card p-3">
+        <img 
+          src="imagenes/artbybottaarbol2.jpeg" 
+          class="product-image" 
+          alt="Arbol"
+           
+          data-bs-img="imagenes/artbybottaarbol2.jpeg"
+          data-bs-title="Arbol"
+          data-bs-year="2023"
+          data-bs-size="20x30 cm"
+          data-bs-tech="Acrílico sobre fibrofacil"
+        >
+        <div class="card-body">
+          <h5 class="text-center">Arbol</h5>
+          <p class="text-center obra-detalles">
+            <strong>Año:</strong> 2023<br>
+            <strong>Dimensiones:</strong> 20x30 cm<br>
+            <strong>Técnica:</strong> Acrílico sobre fibrofacil
+          </p>
+          <a href="#contacto" class="btn btn-info w-100 mt-2">Solicitar Información</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Obras Personalizadas Section -->
+<section id="personalizadas">
+  <h2>Obras Personalizadas</h2>
+  <p>Si deseas una obra única y personalizada, ¡contáctanos! Estaremos encantados de crear algo exclusivo para ti.</p>
+  <p>Podes mandarnos un WhatsApp, DM en IG o contactarnos vía mail: artbybotta@gmail.com</p>
+
+  <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+    <a href="https://wa.me/5491158848199" 
+   target="_blank" 
+   class="btn btn-lg btn-whatsapp">
+  <i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+
+    <a href="https://www.instagram.com/artbybotta" 
+   target="_blank" 
+   class="btn btn-lg btn-instagram">
+  <i class="fab fa-instagram"></i> Instagram
+</a>
+
+  </div>
+
+  <div class="text-center mt-4">
+    <a href="#contacto" class="btn btn-primary btn-lg">
+      Solicita tu Obra Personalizada
+    </a>
+  </div>
+</section>
+
+
+<!-- Contacto Section -->
+<section id="contacto" class="container my-5">
+  <h2 class="text-center">Contacto</h2>
+  <div class="form-container">
+    <iframe src="https://form.jotform.com/252268676049670" frameborder="0">Cargando…</iframe>
+  </div>
+</section>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/5491158848199" class="whatsapp-button">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2026 Galería Botta Art & Paints. Todos los derechos reservados.</p>
+</footer>
+
+
+
+<!-- Scripts -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const images = document.querySelectorAll('.product-image');
+  const modalImage = document.getElementById('modal-image');
+  const modalTitle = document.getElementById('imageModalLabel');
+  const modalYear = document.getElementById('modal-year');
+  const modalSize = document.getElementById('modal-size');
+  const modalTech = document.getElementById('modal-tech');
+
+  let currentIndex = 0; // Para saber qué imagen se está mostrando
+
+  // Función para mostrar una imagen en el modal
+  function showImage(index) {
+    const image = images[index];
+    modalImage.src = image.getAttribute('data-bs-img');
+    modalTitle.textContent = image.getAttribute('data-bs-title');
+    modalYear.textContent = image.getAttribute('data-bs-year') || '';
+    modalSize.textContent = image.getAttribute('data-bs-size') || '';
+    modalTech.textContent = image.getAttribute('data-bs-tech') || '';
+    currentIndex = index;
+  }
+
+  // Crear una sola instancia global del modal
+  const imageModalEl = document.getElementById('imageModal');
+  const imageModal = new bootstrap.Modal(imageModalEl);
+
+  // Abrir modal al hacer clic en una imagen
+  images.forEach((image, index) => {
+    image.addEventListener('click', () => {
+      showImage(index);
+      imageModal.show(); // reutilizamos la misma instancia
+    });
+  });
+
+  // Navegación con flechas
+  const leftArrow = document.querySelector('.left-arrow');
+  const rightArrow = document.querySelector('.right-arrow');
+
+  leftArrow.addEventListener('click', () => {
+    let newIndex = currentIndex - 1;
+    if (newIndex < 0) newIndex = images.length - 1;
+    showImage(newIndex);
+  });
+
+  rightArrow.addEventListener('click', () => {
+    let newIndex = currentIndex + 1;
+    if (newIndex >= images.length) newIndex = 0;
+    showImage(newIndex);
+  });
+
+  // Limpiar cualquier backdrop residual al cerrar el modal
+  imageModalEl.addEventListener('hidden.bs.modal', () => {
+    const backdrop = document.querySelector('.modal-backdrop');
+    if (backdrop) backdrop.remove();
+  });
+</script>
+
+
+
+
+
+</body>
+</html>

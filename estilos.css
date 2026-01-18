@@ -1,0 +1,108 @@
+/* Estilos generales (para pantallas grandes) */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilos específicos para móviles */
+@media (max-width: 576px) {
+  .navbar {
+    background-color: #444;
+  }
+
+  .product-image {
+    height: 200px;
+  }
+}
+
+/* Estilos para tabletas */
+@media (max-width: 768px) {
+  .navbar {
+    background-color: #666;
+  }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 992px) {
+  .navbar {
+    background-color: #333;
+  }
+}
+.btn-whatsapp {
+  background: linear-gradient(
+    45deg,
+    #25d366,
+    #1ebe5d,
+    #128c7e
+  );
+  color: white;
+  border: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.btn-whatsapp i {
+  margin-right: 6px;
+}
+
+.btn-instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  color: white;
+  border: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-instagram:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.btn-instagram i {
+  margin-right: 6px;
+}
+
+
+.btn-info {
+  border-radius: 8px;
+  font-weight: 600;
+}
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
