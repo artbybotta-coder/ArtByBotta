@@ -3,41 +3,18 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
+.modal-dialog {
+  max-width: 95vw;  /* Ancho máximo 95% del viewport ancho */
+  margin: 1.75rem auto;
+}
+
 .modal-content {
-  max-width: 90vw;      /* ancho máximo del modal en pantalla pequeña */
-  max-height: 90vh;     /* alto máximo relativo a la pantalla */
-  overflow-y: auto;     /* agrega scroll vertical si el contenido es más alto */
-  padding: 20px;
+  max-height: 90vh;  /* Alto máximo 90% del viewport alto */
+  overflow-y: auto;  /* Scroll vertical si se pasa de alto */
+  padding: 15px;
   box-sizing: border-box;
-  background-color: white;
-  border-radius: 8px;
 }
 
-.modal-content img {
-  width: 100%;       /* que la imagen use todo el ancho disponible */
-  height: auto;      /* para mantener proporción */
-  display: block;
-  margin-bottom: 15px;
-}
-
-.modal-content .title,
-.modal-content .info,
-.modal-content .button-container {
-  margin-bottom: 12px;
-}
-
-.modal-content .button-container {
-  text-align: center;
-}
-
-/* Ajustes para dispositivos muy pequeños */
-@media (max-width: 576px) {
-  .modal-content {
-    max-width: 95vw;
-    max-height: 95vh;
-    padding: 15px;
-  }
-}
 
 
 /* Estilos para tabletas */
@@ -132,5 +109,6 @@ body {
 .right-arrow {
   right: 10px;
 }
+
 
 
