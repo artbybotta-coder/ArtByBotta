@@ -10,9 +10,13 @@ body {
   }
 
   .product-image {
-    height: 200px;
+    width: 100%;       /* ocupa todo el ancho del contenedor */
+    height: auto;      /* mantiene la proporción original */
+    object-fit: cover; /* se asegura de que no se deforme; recorta lo mínimo */
+    display: block;    /* elimina espacios extra debajo de la imagen */
   }
 }
+
 
 /* Estilos para tabletas */
 @media (max-width: 768px) {
@@ -106,3 +110,4 @@ body {
 .right-arrow {
   right: 10px;
 }
+
