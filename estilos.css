@@ -3,17 +3,7 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-.modal-dialog {
-  max-width: 95vw;  /* Ancho máximo 95% del viewport ancho */
-  margin: 1.75rem auto;
-}
-
-.modal-content {
-  max-height: 90vh;  /* Alto máximo 90% del viewport alto */
-  overflow-y: auto;  /* Scroll vertical si se pasa de alto */
-  padding: 15px;
-  box-sizing: border-box;
-}
+/* Estilos específicos para móviles */ @media (max-width: 576px) { .navbar { background-color: #444; } .product-image { height: 200px; } }
 
 
 
@@ -109,6 +99,7 @@ body {
 .right-arrow {
   right: 10px;
 }
+
 
 
 
