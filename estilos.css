@@ -3,17 +3,39 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-/* Estilos específicos para móviles */
-@media (max-width: 576px) {
-  .navbar {
-    background-color: #444;
-  }
+.modal-content {
+  max-width: 90vw;      /* ancho máximo del modal en pantalla pequeña */
+  max-height: 90vh;     /* alto máximo relativo a la pantalla */
+  overflow-y: auto;     /* agrega scroll vertical si el contenido es más alto */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 8px;
+}
 
-  .product-image {
-    width: 100%;       /* ocupa todo el ancho del contenedor */
-    height: auto;      /* mantiene la proporción original */
-    object-fit: cover; /* se asegura de que no se deforme; recorta lo mínimo */
-    display: block;    /* elimina espacios extra debajo de la imagen */
+.modal-content img {
+  width: 100%;       /* que la imagen use todo el ancho disponible */
+  height: auto;      /* para mantener proporción */
+  display: block;
+  margin-bottom: 15px;
+}
+
+.modal-content .title,
+.modal-content .info,
+.modal-content .button-container {
+  margin-bottom: 12px;
+}
+
+.modal-content .button-container {
+  text-align: center;
+}
+
+/* Ajustes para dispositivos muy pequeños */
+@media (max-width: 576px) {
+  .modal-content {
+    max-width: 95vw;
+    max-height: 95vh;
+    padding: 15px;
   }
 }
 
@@ -110,4 +132,5 @@ body {
 .right-arrow {
   right: 10px;
 }
+
 
